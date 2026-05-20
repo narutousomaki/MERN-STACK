@@ -1,0 +1,43 @@
+<html>  
+    <head> 
+        <title>Simple Task Tracker</title>
+    </head>
+    <body>
+        <div></div>
+            <h1>Task Tracker</h1>
+            <input type="text" placeholder="Enter a task" id="taskname"><br></br>
+            <input type="text" placeholder="Enter task category" id="category"><br></br>
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="clearAllTasks()">Clear List</button>
+        </div>
+        <div id="taskContainer"></div>
+    </body>
+    <script>
+        let tasks = [];
+        function addTask() {
+            let taskname = document.getElementById("taskname").value;
+            let category = document.getElementById("category").value;
+            let task = {
+                name: taskname,
+                category: category
+            };
+            tasks.push(task);
+            displayTasks();
+        }
+        function displayTasks() {
+            let result = "";
+            for (let i = 0; i < tasks.length; i++) {
+                result += `
+                <div class="task-card">
+                    <h2>${tasks[i].name}</h2>
+                    <p><strong>Category:</strong> ${tasks[i].category}</p>
+                </div>`;
+            }
+            document.getElementById("taskContainer").innerHTML = result;
+        }
+        function clearAllTasks() {
+            tasks = [];
+            displayTasks();
+        }
+    </script>
+</html>

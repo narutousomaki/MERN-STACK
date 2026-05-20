@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="details">
+            <h1>Registration Form</h1>
+            <label >Name:</label>
+            <input type="text" placeholder="Enter your name" id="name" ><br></br>
+            <P id="nameresult"></P>
+            <label >Email:</label>
+            <input type="email" placeholder="Enter your email" id="email"><br></br>
+            <P id="emailresult"></P>
+            <label >Password:</label>
+            <input type="password" placeholder="Enter your password" id="password"><br></br>
+            <button onclick="checkdetails()" class="btn">Submit</button>
+            <P id="checkresult"></P>
+        </div>
+
+    </body>
+    <script>
+        function checkdetails() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            document.getElementById("nameresult").innerText = "Name: " + name;
+            document.getElementById("emailresult").innerText = "Email: " + email;
+            document.getElementById("passwordresult").innerText = "Password: " + password;
+            }
+        
+    </script>
+</html>

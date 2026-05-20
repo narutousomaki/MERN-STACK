@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="age">Age Checker</h1>
+            <input class="en" type="Text" placeholder="Enter your age" id="age"><br></br>
+            <button onclick="checkage()" class="bt">Check Age</button><br></br>
+            <p id="ageresult"></p>
+        </div>
+        <div class="hero">
+            <h1 class="age">Even / Odd Checker</h1>
+            <input class="en" type="Text" placeholder="Enter a number" id="number"><br></br>
+            <button onclick="checknumber()" class="bt">Check Number</button><br></br>
+            <p id="numberresult"></p>
+        </div>
+        <div class="zero">
+            <h1 class="age">Simple Calculator</h1>
+            <input class="en" type="Text" placeholder="Enter first number" id="calc1"><br></br>
+            <input class="en" type="Text" placeholder="Enter second number" id="calc2"><br></br>
+            <button onclick="checksum()" class="bt">Check sum</button><br></br>
+            <p id="sumresult"></p>
+        </div>
+    </body>
+    <script>
+        function checkage() {
+          let age = document.getElementById("age").value;
+          if (age >=18){8
+            document.getElementById("ageresult").innerText = "You are an adult";
+          } else {
+            document.getElementById("ageresult").innerText = "You are a minor";
+          }
+
+          
+        }
+         function checknumber() {
+          let number = document.getElementById("number").value;
+         if (number % 2 == 0){
+            document.getElementById("numberresult").innerText = "The number is even";
+          } else {
+            document.getElementById("numberresult").innerText = "The number is odd";
+          }
+        }
+        function checksum() {
+            let num1 = Number(document.getElementById("calc1").value);
+            let num2 = Number(document.getElementById("calc2").value);
+            let sum = num1 + num2;
+            document.getElementById("sumresult").innerText = "The sum is: "+sum;
+        }
+        </script>
+            
+</html>

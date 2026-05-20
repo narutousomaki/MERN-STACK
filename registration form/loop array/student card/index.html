@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Student Card Generator</title>
+    <link rel="stylesheet" href="style.css">    
+    </head>
+    <body>
+        <div class ="container">
+        <h1>Student Card Generator</h1>
+        <input type="Text" placeholder="Enter Student Name" id="name"><br></br>
+        
+        <input type="Text" placeholder="Enter Course" id="course"><br></br>
+       
+        <input type="Text" placeholder="Enter College" id="college"><br></br>
+        
+        <button class="btn" onclick="addstudent()" >Add Student</button><br></br>
+ </div>
+ <div id="studentContainer">
+    
+ </div>
+    </body>
+    <script>
+        let students = [];
+        function addstudent(){
+            let name1 = document.getElementById("name").value;
+            let course1 = document.getElementById("course").value;
+            let college1 = document.getElementById("college").value;
+            
+        
+        let student = {
+            name2: name1,
+            course2: course1,
+            college2: college1,
+        };
+        students.push(student);
+        let result = "";
+        for(let i = 0; i < students.length; i++){
+        result += `
+        <div class="student-card">
+            <h2>${students[i].name2}</h2>
+            <p><strong>Course:</strong> ${students[i].course2}</p>
+            <p><strong>College:</strong> ${students[i].college2}</p>
+        </div>`;
+        
+    }
+    document.getElementById("studentContainer").innerHTML = result;
+        }
+    </script>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(250, 233, 199);
+    font-family: Arial, sans-serif;
+}
+.details{
+    background-color: rgb(233, 213, 174);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.btn{
+    background-color: rgb(39, 9, 144);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
