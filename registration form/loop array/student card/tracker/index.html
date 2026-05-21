@@ -1,14 +1,15 @@
 <html>  
     <head> 
         <title>Simple Task Tracker</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div></div>
+        <div class="task-input">
             <h1>Task Tracker</h1>
             <input type="text" placeholder="Enter a task" id="taskname"><br></br>
             <input type="text" placeholder="Enter task category" id="category"><br></br>
-            <button onclick="addTask()">Add Task</button>
-            <button onclick="clearAllTasks()">Clear List</button>
+            <button class="add-button" onclick="addTask()">Add Task</button>
+            <button class="clear-button" onclick="clearAllTasks()">Clear List</button>
         </div>
         <div id="taskContainer"></div>
     </body>
